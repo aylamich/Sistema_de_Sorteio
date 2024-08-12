@@ -20,7 +20,7 @@ async function sortear(){
     await axios.get('http://127.0.0.1:5000/api/sortear?num1='+numeroInicial+'&num2='+numeroLimite)
            .then(response => {setNumeroSorteado('O numero sorteado foi: '+response.data.message); })
            .catch(error   => { console.error('Erro ao buscar dados:', error); });
-    //setNumeroSorteado('O numero sorteado foi: '+sorteado);
+    // setNumeroSorteado('O numero sorteado foi: '+Math.floor(Math.random() * (numeroLimite - numeroInicial + 1)) + numeroInicial);
   }
 
   return (
